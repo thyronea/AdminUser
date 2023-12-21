@@ -1,8 +1,4 @@
-HELLO!
-
-Pending To Do:
-- Search Function
-- Internal-Messaging System
+Hello! PHP noob here. This is my very first project, DLi (if you know, you know).
 
 Functions:
 - Registration (User & Admin)
@@ -29,3 +25,7 @@ Currently Logging:
 - Add User
 - Delete User
 - Email
+
+Pending:
+- Search Function
+- Internal-Messaging System

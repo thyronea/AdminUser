@@ -1,8 +1,4 @@
-HELLO!
-
-Pending To Do:
-- Search Function
-- Internal-Messaging System
+Don't mind my first PHP project. It's a simple landing page with admin/user capabilities (formerly known as DLi).
 
 Functions:
 - Registration (User & Admin)
@@ -29,3 +25,7 @@ Currently Logging:
 - Add User
 - Delete User
 - Email
+
+Pending:
+- Search Function
+- Internal-Messaging System

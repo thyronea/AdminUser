@@ -1,0 +1,31 @@
+HELLO!
+
+Pending To Do:
+- Search Function
+- Internal-Messaging System
+
+Functions:
+- Registration (User & Admin)
+- Registration - Email Verification
+- Forgot Password (User & Admin)
+- Sign In
+- Sign In - Email Code Verification
+- Welcome Modal - Complete Profile (New Users Only)
+- Update Profile (User & Admin)
+- Change Password (User & Admin)
+- View/Clear Activity & Email Log within GroupID (Admin Only)
+- Send Email
+- Add New User within GroupID with user/admin option (Admin Only)
+- Upload Image
+- Edit Image (current image will be replaced and deleted in DB and directory)
+- Delete User within GroupID - will also delete image in directory (Admin Only)
+- Logout
+
+Currently Logging:
+- Registration
+- Sign In
+- Log Out
+- Update Profile
+- Add User
+- Delete User
+- Email

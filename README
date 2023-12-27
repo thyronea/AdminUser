@@ -1,21 +1,25 @@
 Don't mind my first PHP project. It's a simple landing page with admin/user capabilities (formerly known as DLi).
 
-Functions:
-- Registration (User & Admin)
+Basic:
+- Register
 - Registration - Email Verification
-- Forgot Password (User & Admin)
 - Sign In
 - Sign In - Email Code Verification
-- Welcome Modal - Complete Profile (New Users Only)
-- Update Profile (User & Admin)
-- Change Password (User & Admin)
-- View/Clear Activity & Email Log within GroupID (Admin Only)
+- New User Welcome Modal - Complete Profile
+- Update Profile
+- Change-Password (password reset from account settings)
 - Send Email
-- Add New User within GroupID with user/admin option (Admin Only)
 - Upload Image
 - Edit Image (current image will be replaced and deleted in DB and directory)
-- Delete User within GroupID - will also delete image in directory (Admin Only)
+- Search Bar
 - Logout
+- Forgot-Password (password reset from sign-in page)
+
+Admin:
+- Everything in Basic
+- Analytics
+- Activity & Email Log
+- Account Management - Add/Edit/Delete User
 
 Currently Logging:
 - Registration
@@ -27,5 +31,5 @@ Currently Logging:
 - Email
 
 Pending:
-- Search Function
+- Profile Page
 - Internal-Messaging System

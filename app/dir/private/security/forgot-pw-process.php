@@ -15,12 +15,12 @@ function send_password_reset($userID, $fname, $lname, $email, $new_token)
   $mail->isSMTP();
   $mail->SMTPAuth = true;
 
-  $mail->Host = "smtp.gmail.com";
+  $mail->Host = "";
   $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-  $mail->Port = 587;
+  $mail->Port = ;
 
-  $mail->Username = "thyrone.antonio@gmail.com";
-  $mail->Password = "mhopftvkjlemevgn";
+  $mail->Username = "";
+  $mail->Password = "";
 
   $mail->setFrom($email);
   $mail->addAddress($email);

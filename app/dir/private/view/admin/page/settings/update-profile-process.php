@@ -25,9 +25,9 @@ if(isset($_POST['admin_update_profile']))
   $email = mysqli_real_escape_string($con, $_POST['email']);
   $type = mysqli_real_escape_string($con, "Updated");
   $message = mysqli_real_escape_string($con, ": Profile");
+  $fullname = "$fname $lname";
 
   // Encrypt Activity Data and insert to Activities table
-  $fullname = "$fname $lname";
   $act_message = "$type $fname $lname $message";
   $encrypt_fullname = encryptthis($fullname, $key);
   $encrypt_type = encryptthis($type, $key);
@@ -41,6 +41,12 @@ if(isset($_POST['admin_update_profile']))
   $admin  = "UPDATE admin SET email=? WHERE userID='$userID' ";
   $stmt = $con->prepare($admin);
   $stmt->bind_param("s", $email);
+  $stmt->execute();
+
+  // Updates engine table
+  $admin  = "UPDATE engine SET keyword1=?, keyword3=?  WHERE engineID='$engineID' ";
+  $stmt = $con->prepare($admin);
+  $stmt->bind_param("ss", $fullname, $email);
   $stmt->execute();
 
   // Encrypt Patient's Name, dob, email and update

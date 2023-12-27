@@ -1,8 +1,8 @@
 <?php
 // Send email
-require '../../../../../vendors/mailer/PHPMailer/src/Exception.php'; // PHPMailer source
-require '../../../../../vendors/mailer/PHPMailer/src/PHPMailer.php'; // PHPMailer source
-require '../../../../../vendors/mailer/PHPMailer/src/SMTP.php'; // PHPMailer source
+require '../../../../../vendor/mailer/PHPMailer/src/Exception.php'; // PHPMailer source
+require '../../../../../vendor/mailer/PHPMailer/src/PHPMailer.php'; // PHPMailer source
+require '../../../../../vendor/mailer/PHPMailer/src/SMTP.php'; // PHPMailer source
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 

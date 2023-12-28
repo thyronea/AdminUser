@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Home';
+  $page_title = 'DLi';
   session_start();
   require_once('private/initialize.php');
   include(PRIVATE_COMPONENTS_PATH . '/header.php');

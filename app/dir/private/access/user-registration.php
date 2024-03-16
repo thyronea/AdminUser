@@ -28,6 +28,7 @@ if(isset($_POST['register_user'])) {
   $role = mysqli_real_escape_string($con, $_POST['role']);
   $fname = mysqli_real_escape_string($con, $_POST['fname']);
   $lname = mysqli_real_escape_string($con, $_POST['lname']);
+  $filename = mysqli_real_escape_string($con, "default-profile-pic.jpeg");
   $type = mysqli_real_escape_string($con, "Registered");
   $as = mysqli_real_escape_string($con, "as");
   $admin = mysqli_real_escape_string($con, "Admin");
@@ -65,12 +66,12 @@ if(isset($_POST['register_user'])) {
     $mail->isSMTP();
     $mail->SMTPAuth = true;
 
-    $mail->Host = "";
+    $mail->Host = "smtp.gmail.com";
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
-    $mail->Username = "";
-    $mail->Password = "";
+    $mail->Username = "thyrone.antonio@gmail.com";
+    $mail->Password = "mhopftvkjlemevgn";
 
     $mail->setFrom($email);
     $mail->addAddress($email);
@@ -102,6 +103,12 @@ if(isset($_POST['register_user'])) {
     $sql = "INSERT INTO profile (userID, engineID, groupID, fname, lname, email, role) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = $con->prepare($sql);
     $stmt->bind_param("sssssss", $userID, $engineID, $groupID, $encrypted_fname, $encrypted_lname, $encrypted_email, $encrypted_role);
+    $stmt->execute();
+
+    // stores default profile image to profile_image table
+    $sql = "INSERT INTO profile_image (userID, groupID, filename) VALUES (?, ?, ?)";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param("sss", $userID, $groupID, $filename);
     $stmt->execute();
 
     // stores data in engine table

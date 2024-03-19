@@ -15,7 +15,7 @@ if(isset($_SESSION["userID"])) // Login session
   include('modal/notification/complete-profile/main.php');
   include('modal/notification/complete-profile/alert-process.php');
 
-  // Additional Modal
+  // Logout Modal
   include('modal/logout/logout-modal.php');
 }
 else

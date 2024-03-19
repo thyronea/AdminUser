@@ -1,10 +1,10 @@
 <?php
 
 // Create connection
-  $servername = "";
-  $username = "";
-  $password = "!";
-  $database = "";
+  $servername = "mariadb";
+  $username = "root";
+  $password = "Grayson2019!";
+  $database = "dli";
 
   $con = mysqli_connect($servername, $username, $password, $database);
 

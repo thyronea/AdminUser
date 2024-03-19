@@ -31,8 +31,6 @@ if(isset($_POST['settings_update_btn']))
   $stmt->execute();
 
   // Encrypt Patient's Name, dob, email and update
-  $encrypt_fname = encryptthis($fname, $key);
-  $encrypt_lname = encryptthis($lname, $key);
   $encrypt_email = encryptthis($email, $key);
   $profile  = "UPDATE profile SET fname=?, lname=?, email=? WHERE userID='$userID' ";
   $stmt = $con->prepare($profile);

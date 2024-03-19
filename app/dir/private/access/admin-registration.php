@@ -95,15 +95,13 @@ if(isset($_POST['register_btn'])) {
     $stmt->execute();
 
     // Encrypt Profile Data
-    $encrypted_fname = encryptthis($fname, $key);
-    $encrypted_lname = encryptthis($lname, $key);
     $encrypted_email = encryptthis($email, $key);
     $encrypted_role = encryptthis($role, $key);
 
     // stores user's profile in profile table (encrypted)
     $sql = "INSERT INTO profile (userID, engineID, groupID, fname, lname, email, role) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt = $con->prepare($sql);
-    $stmt->bind_param("sssssss", $userID, $engineID, $groupID, $encrypted_fname, $encrypted_lname, $encrypted_email, $encrypted_role);
+    $stmt->bind_param("sssssss", $userID, $engineID, $groupID, $fname, $lname, $encrypted_email, $encrypted_role);
     $stmt->execute();
 
     // stores default profile image to profile_image table
@@ -130,8 +128,6 @@ if(isset($_POST['register_btn'])) {
     $fullname = "$fname $lname";
     $act_message = "$type $as $role";
     $encrypted_fullname = encryptthis($fullname, $key);
-    $encrypted_fname = encryptthis($fname, $key);
-    $encrypted_lname = encryptthis($lname, $key);
     $encrypted_message = encryptthis($act_message, $key);
 
     // stores data in activity table

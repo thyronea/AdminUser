@@ -35,9 +35,9 @@ $mydata =
         
         foreach($query_run as $profile){
             
-            $id = $profile['userID'];
-            $image = $profile['filename'];
-            $fname = htmlspecialchars(decryptthis($profile['fname'], $key));
+            $id = htmlspecialchars($profile['userID']);
+            $image = htmlspecialchars($profile['filename']);
+            $fname = htmlspecialchars($profile['fname']);
             
             $new_message = false;
             

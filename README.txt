@@ -1,4 +1,4 @@
-A simple CRM framework.
+A simple framework.
 
 Coming soon!
 - Dark Mode

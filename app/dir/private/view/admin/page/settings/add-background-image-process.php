@@ -49,9 +49,9 @@ if(isset($_POST['upload_background_image']))
       $image = mysqli_fetch_assoc($check_image_run);
 
       unlink('../../../image/background/'.$image['filename']);
-      $upload_image = "INSERT INTO background_image (userID, groupID, filename) VALUES (?, ?, ?)";
-      $stmt = $con->prepare($upload_image);
-      $stmt->bind_param("sss", $userID, $groupID, $img_name);
+      $update_image  = "UPDATE background_image SET filename=? WHERE userID='$userID' ";
+      $stmt = $con->prepare($update_image);
+      $stmt->bind_param("s", $img_name);
       $stmt->execute();
 
       if(move_uploaded_file($tempname, "$folder/$img_name")) {

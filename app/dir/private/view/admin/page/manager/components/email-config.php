@@ -8,12 +8,12 @@ $mail = new PHPMailer(true);
 $mail->isSMTP();
 $mail->SMTPAuth = true;
 
-$mail->Host = "";
+$mail->Host = "smtp.gmail.com";
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->Port = ;
+$mail->Port = 587;
 
-$mail->Username = "";
-$mail->Password = "";
+$mail->Username = "thyrone.antonio@gmail.com";
+$mail->Password = "mhopftvkjlemevgn";
 
 $mail->setFrom(htmlspecialchars($_SESSION['email']), $fromName);
 $mail->addAddress($email);

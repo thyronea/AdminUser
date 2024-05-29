@@ -4,7 +4,7 @@ Coming soon!
 - Dark Mode
 
 Regular User:
-- Data encrypted
+- Data encryption
 - Register 
 - Registration - Email Verification (required)
 - Sign In

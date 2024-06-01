@@ -1,6 +1,6 @@
 <?php
 
-// Create connection
+// Create connection....
   $servername = "";
   $username = "";
   $password = "";

@@ -38,7 +38,7 @@ if(isset($_POST['admin_login_btn']))
     if(password_verify(mysqli_real_escape_string($con, $_POST['password']), htmlspecialchars($user["password"]))) // verify password
     {
 
-      // Retrieves key for data decryption
+      // Retrieves key for data decryption.
       $token_query = "SELECT * FROM token WHERE userID='$userID' ";
       $token_query_run = mysqli_query($con, $token_query);
       $token = mysqli_fetch_assoc($token_query_run);

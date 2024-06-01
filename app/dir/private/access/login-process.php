@@ -54,12 +54,12 @@ if(isset($_POST['admin_login_btn']))
       $profile_query = "SELECT * FROM profile WHERE userID='$userID' ";
       $profile_query_run = mysqli_query($con, $profile_query);
       $profile = mysqli_fetch_assoc($profile_query_run);
-      $_SESSION['fname'] = htmlspecialchars($profile["fname"], $key); // Retrieved first name for SESSION
-      $_SESSION['lname'] = htmlspecialchars($profile["lname"], $key); // Retrieved last name for SESSION
+      $_SESSION['fname'] = htmlspecialchars($profile["fname"]); // Retrieved first name for SESSION
+      $_SESSION['lname'] = htmlspecialchars($profile["lname"]); // Retrieved last name for SESSION
       $_SESSION['email'] = htmlspecialchars(decryptthis($profile["email"], $key)); // Retrieved email for SESSION
       $_SESSION['role'] = htmlspecialchars(decryptthis($profile["role"], $key)); // Retrieved role for SESSION
-      $fname = htmlspecialchars($profile["fname"], $key); // Decrypted first name
-      $lname = htmlspecialchars($profile["lname"], $key); // Decrypted last name
+      $fname = htmlspecialchars($profile["fname"]); // Decrypted first name
+      $lname = htmlspecialchars($profile["lname"]); // Decrypted last name
 
       // Encrypt Activities Data
       $fullname = "$fname $lname"; // Combines first and last name for encryption
